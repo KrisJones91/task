@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Taskmaster</title>
+</head>
+
+<body>
+    <header class="container-fluid">
+        <div class="row text-center py-3">
+            <div class="col mt-3">
+                <h1 class="headtitle-main">Task</h1>
+                <h1 class="headtitle-two">Master</h1>
+            </div>
+        </div>
+    </header>
+    <main class="container-fluid">
+        <form onsubmit="app.tasksController.createTask(event)">
+            <div class="row mt-1 justify-content-center" id="new-task">
+                <div class="col-md-6 ">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="New List" name="name">
+                        <label class="m-2 text-white"> Color: </label>
+                        <input type="color" class=" mt-2 form-control-color" id="colorMe" title="main Color">
+                    </div>
+                    <div class="row justify-content-center">
+                        <button class="btn btn-outline-primary" type="submit">Create</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="row" id="tasks">
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+    <footer class="container-fluid bg-dark text-light">
+        <div class="row text-right">
+            <div class="col">
+                <p><small>Made by Kris Jones</small></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app/main.js" type="module"></script>
+</body>
+
+</html>

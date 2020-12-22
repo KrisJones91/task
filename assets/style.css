@@ -1,0 +1,46 @@
+.headtitle-main {
+    font-family: 'Raleway', sans-serif;
+   font-size: 70px;
+   color: transparent;
+   -webkit-background-clip: text;
+   background-image: url("https://31.media.tumblr.com/940af0bdb80cd083be5e328837bd7cd1/tumblr_mll301yCH01qa8a12o1_500.gif"); 
+   background-position: 30% 50%;
+   line-height: 85%;
+   letter-spacing: 6px;
+
+}
+.headtitle-two {
+    font-family: 'Raleway', sans-serif;
+   font-size: 68px;
+   color: transparent;
+   -webkit-background-clip: text;
+   background-image: url("https://31.media.tumblr.com/940af0bdb80cd083be5e328837bd7cd1/tumblr_mll301yCH01qa8a12o1_500.gif"); 
+   background-position: 30% 50%;
+   line-height: 74%;
+   letter-spacing: 6px;
+
+}
+
+body { 
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column;
+    background-color:rgb(68, 68, 68);
+ }
+header{ 
+    min-height: 8vh; 
+} 
+main{
+    flex-grow: 1;
+} 
+footer{ 
+    min-height: 8vh;
+}
+
+
+#trash{
+    outline: none;
+    border: none;
+    background: none;
+}
+
