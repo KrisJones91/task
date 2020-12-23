@@ -5,7 +5,7 @@ export default class Task {
     constructor({ title, color, numTasks, id }) {
         this.title = title;
         this.color = color;
-        this.numTasks = numTasks
+        this.numTasks = numTasks || 0
         this.id = id || generateId()
 
 
@@ -26,9 +26,9 @@ export default class Task {
                 </div>
                 <div class="card-footer" style="background-color:${this.color}">
                     <div class="row">
-                        <div class="input-group mb-3">
-                            <form onsubmit="app.itemsController.createItem(event, '${this.id}' )">
-                                <input type="text" class="form-control" placeholder="Add Task" name="itemName">
+                        <div class="input-group mb-2">
+                            <form onsubmit="app.itemsController.createItem(event, '${this.id}' )" class="d-flex flex-row">
+                                <input type="text" class="form-control" placeholder="Add Task" name="itemName" pattern=".{3,50}" required>
                                 <button type="submit" class="btn" >+</button>
                             </form>
                         </div>

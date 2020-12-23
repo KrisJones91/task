@@ -3,11 +3,11 @@ import Task from "../Models/Task.js"
 import Items from "../Models/Items.js"
 
 export function Save() {
-    localStorage.setItem("taskData", JSON.stringify({ tasks: ProxyState.tasks, items: ProxyState.items }))
+    localStorage.setItem("tasks", JSON.stringify({ tasks: ProxyState.tasks, items: ProxyState.items }))
 }
 
 export function Load() {
-    let data = JSON.parse(localStorage.getItem("taskData"))
+    let data = JSON.parse(localStorage.getItem("tasks"))
     if (data) {
         console.log(data, "task1")
         ProxyState.tasks = data.tasks.map(task => new Task(task))

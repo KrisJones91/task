@@ -31,7 +31,8 @@
             <div class="row mt-1 justify-content-center" id="new-task">
                 <div class="col-md-6 ">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="New List" name="name">
+                        <input type="text" class="form-control" placeholder="New List" name="name" pattern=".{3,15}"
+                            required>
                         <label class="m-2 text-white"> Color: </label>
                         <input type="color" class=" mt-2 form-control-color" id="colorMe" title="main Color">
                     </div>

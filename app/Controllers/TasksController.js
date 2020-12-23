@@ -22,6 +22,7 @@ export default class TasksController {
         ProxyState.on("tasks", _drawTasks)
         ProxyState.on("items", _drawTasks)
         _drawTasks()
+
     }
 
 
@@ -37,17 +38,13 @@ export default class TasksController {
         tasksService.createTask(listTask)
         console.log(listTask)
         form.reset();
+        console.log(ProxyState.tasks)
 
     }
     deleteTask(id) {
         tasksService.deleteTask(id)
+
     }
 
-    // addItems(event, id) {
-    //     event.preventDefault()
-    //     let form = event.target
-    //     let name = form.items.value
-    //     (id, name)
-    //     _drawTasks();
-    // }
+
 }

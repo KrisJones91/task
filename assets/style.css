@@ -38,6 +38,12 @@ footer{
 }
 
 
+.card-title{
+    
+    text-shadow: 3px 4px 10px black;
+}
+
+
 #trash{
     outline: none;
     border: none;
