@@ -15,15 +15,20 @@ class TaskService {
     }
 
     deleteTask(id) {
-        ProxyState.tasks = ProxyState.tasks.filter(task => task.id !== id)
+        let confirm = window.confirm("Are you sure?")
+        // @ts-ignore
+        if (confirm == true) {
+            ProxyState.tasks = ProxyState.tasks.filter(task => task.id !== id)
+        }
+
         this.saveTasks()
+
     }
 
     loadTasks() {
         Load()
 
     }
-
     saveTasks() {
         Save()
     }

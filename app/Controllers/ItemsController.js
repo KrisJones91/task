@@ -7,19 +7,15 @@ function _drawItems() {
     let items = ProxyState.items
 
 
-    // items.forEach(item => {
-    //     let template = ""
-    //     let taskId = item.taskId
-    //     template = item.Template
-    //     let div = document.createElement("div");
-    //     div.innerHTML = template
-    //     console.log(taskId)
-    //     document.getElementById(`${taskId}`).appendChild(div)
-    // })
-
 
 }
 
+function _drawChecks(id) {
+    let theTask = ProxyState.tasks.find(task => task.id == id)
+
+    document.getElementById(`${id}-count`).innerHTML = `${theTask.calcItems()}/${theTask.calcTotal()}`
+
+}
 
 
 export default class ItemsController {
@@ -43,4 +39,10 @@ export default class ItemsController {
     deleteItem(id) {
         itemsService.deleteItem(id)
     }
+    checkBox(id, taskId) {
+        itemsService.checkBox(id)
+        //changed param to taskId because it couldn't identify the taskId by the item id
+        _drawChecks(taskId)
+    }
+
 }
