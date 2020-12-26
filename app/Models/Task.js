@@ -37,7 +37,7 @@ export default class Task {
                         <div class="input-group mb-2">
                             <form onsubmit="app.itemsController.createItem(event, '${this.id}' )" class="d-flex flex-row">
                                 <input type="text" class="form-control" placeholder="Add Task" name="itemName" pattern=".{3,50}" required>
-                                <button type="submit" class="btn" >+</button>
+                                <button type="submit" class="btn" ><b>+</b></button>
                             </form>
                         </div>
                     </div>
